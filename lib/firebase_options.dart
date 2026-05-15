@@ -21,10 +21,7 @@ class DefaultFirebaseOptions {
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for android - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return android;
       case TargetPlatform.iOS:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for ios - '
@@ -53,11 +50,23 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyBDW166EjU4rIHJRzCHg4v7TQjMnl-5Ccc',
-    appId: '1:606963412513:web:118eff7b607a96a23b3d60',
-    messagingSenderId: '606963412513',
-    projectId: 'supply-inventory-1e5e2',
-    authDomain: 'supply-inventory-1e5e2.firebaseapp.com',
-    storageBucket: 'supply-inventory-1e5e2.firebasestorage.app',
+    apiKey: 'AIzaSyBwWCU21d33tZYZIiykb78pvzL-KpJM6-0',
+    appId: '1:68490657747:web:84a3fc1f15681ef79b7926',
+    messagingSenderId: '68490657747',
+    projectId: 'inventoryapp-95c1a',
+    authDomain: 'inventoryapp-95c1a.firebaseapp.com',
+    databaseURL: 'https://inventoryapp-95c1a-default-rtdb.firebaseio.com',
+    storageBucket: 'inventoryapp-95c1a.firebasestorage.app',
+    measurementId: 'G-XN31PB8FG6',
   );
+
+  static const FirebaseOptions android = FirebaseOptions(
+    apiKey: 'AIzaSyCUaSoaehO2aKLb2g3Spqf8c_V5VbhdwyY',
+    appId: '1:68490657747:android:d72869fbf8cec01a9b7926',
+    messagingSenderId: '68490657747',
+    projectId: 'inventoryapp-95c1a',
+    databaseURL: 'https://inventoryapp-95c1a-default-rtdb.firebaseio.com',
+    storageBucket: 'inventoryapp-95c1a.firebasestorage.app',
+  );
+
 }
